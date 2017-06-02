@@ -14,10 +14,10 @@ Steps:
 3. Update your Raspberry Pi 3
 
 1.
-  1. sudo apt-get update -y
-  2. sudo apt-get upgrade –y
-  3. sudo apt-get install rpi-update
-  4. sudo reboot
+  a. sudo apt-get update -y
+  b. sudo apt-get upgrade –y
+  c. sudo apt-get install rpi-update
+  d. sudo reboot
 2. Enable SSH on the PI
 
 1.
