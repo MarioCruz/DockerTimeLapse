@@ -13,24 +13,21 @@ Steps:
 2. Image the SD card and insert into your Raspberry Pi 3
 3. Update your Raspberry Pi 3
 
-1.
+```
  - sudo apt-get update -y
  - sudo apt-get upgrade –y
  - sudo apt-get install rpi-update
  - sudo reboot
-    
+ ```   
 2. Enable SSH on the PI
-
-1.
-  1. In a terminal window : sudo raspi-config
-
-1.
-  1. Select Interfacing Options
-  2. Navigate to and select SSH
-  3. Choose Yes
-  4. Select Ok
-  5. Choose Finish
-
+  ```
+  In a terminal window : sudo raspi-config
+   Select Interfacing Options
+   Navigate to and select SSH
+   Choose Yes
+   Select Ok
+   Choose Finish
+```
 1. Get your Pi online, either via WiFi or Ethernet
 
 1.
