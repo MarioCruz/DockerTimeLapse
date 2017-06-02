@@ -89,15 +89,13 @@ Check that the cables the silver connectors are facing the HDMI port and the blu
 Check that the cables the silver connectors are facing the HDMI port and the blue part faces the USB
 
 1. Start Docker
-
+```
 docker run --restart=always --privileged -e TZ=&quot;US/Central&quot; -v `pwd`/phototimer/config.py:/root/images/config.py -v /mnt/data:/var/image --name cam -d alexellis2/phototimer
-
-1.
-  1. One of the things we noticed was by default the container runs By adding the -e TZ=&quot;US/Central&quot; parameter, we can change the timezone in the container to be what we want.
+```
+1. One of the things we noticed was by default the container runs By adding the -e TZ=&quot;US/Central&quot; parameter, we can change the timezone in the container to be what we want.
 
 1. Install ngrok. This will allow us to SSH into the box from anywhere, even if from behind a firewall.
 
-1.
   1. Create an account on Ngrok https://dashboard.ngrok.com/user/login
   2. sudo wget https://dl.ngrok.com/ngrok\_2.0.19\_linux\_arm.zip
   3. unzip ngrok\_2.0.19\_linux\_arm.zip
@@ -105,8 +103,6 @@ docker run --restart=always --privileged -e TZ=&quot;US/Central&quot; -v `pwd`/p
   5. ./ngrok tcp 221
 
 1. Have ngrok load on reboot
-
-1.
   1. Sudo nano /home/pi/start.sh
   2. Add this to this new file:  /usr/local/bin/ngrok tcp 22
   3. Crontab -e
