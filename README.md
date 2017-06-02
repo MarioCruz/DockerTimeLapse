@@ -30,33 +30,25 @@ Steps:
 ```
 1. Get your Pi online, either via WiFi or Ethernet
 
-1.
-  1. For Wifi:
-
-1.
-  1.
-    1. sudo nano /etc/wpa\_supplicant/wpa\_supplicant.conf
-
-                network={
-
-ssid=&quot;YOUR\_NETWORK\_NAME&quot;
-
-                 psk=&quot;YOUR\_NETWORK\_PASSWORD&quot;
-
-key\_mgmt=WPA-PSK
-
+-- For Wifi:
+-- sudo nano /etc/wpa\_supplicant/wpa\_supplicant.conf
+```
+network={
+ssid="YOUR_NETWORK_NAME"
+  		psk="YOUR_NETWORK_PASSWORD"
+key_mgmt=WPA-PSK
 }
 
+```
 1. Prepare the PiDrive Volume
-
-1.
-  1. sudo fdisk /dev/sda (in my case, the WD PiDrive is /dev/sda)
-  2. sudo mkfs.ext4 /dev/sda1 -L &quot;data&quot;
-  3. sudo mkdir /mnt/data (mount the partition)
-  4. sudo mount -t ext4 -o &quot;noatime&quot; /dev/sda1 /mnt/data
-  5. sudo chown -R 1000:1000 /mnt/data
-  6. sudo chmod -R 775 /mnt/data
-
+```
+    sudo fdisk /dev/sda (in my case, the WD PiDrive is /dev/sda)
+   sudo mkfs.ext4 /dev/sda1 -L &quot;data&quot;
+   sudo mkdir /mnt/data (mount the partition)
+   sudo mount -t ext4 -o &quot;noatime&quot; /dev/sda1 /mnt/data
+  sudo chown -R 1000:1000 /mnt/data
+  sudo chmod -R 775 /mnt/data
+```
 1. Auto mount the drive after every reboot
 
 1.
